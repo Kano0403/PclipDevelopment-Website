@@ -1,0 +1,165 @@
+
+body, main, nav, header, footer {
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    display: inline;
+    float: left;
+    width: 12%;
+    height: 12%;
+}
+
+header {
+    display: block;
+}
+
+nav {
+    display: inline;
+}
+
+nav ul {
+    float: right;
+    list-style-type: none;
+    display: inline;
+    margin-top: 6%;
+    transform: translate(0%, -55%);
+}
+
+nav ul li {
+    display: inline;
+    text-align: right;
+    float: center;
+}
+
+nav ul li a{
+    margin-right: 1em;
+    margin-left: 1em;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    font-size: 1.4em;
+    user-select: none;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: #335666;
+}
+
+nav ul h1 {
+    display: inline;
+    font-size: 2em;
+    user-select: none;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #5d877f;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textbox {
+    margin-top: 12%;
+    width: 60%;
+    margin: auto;
+}
+
+.smlink {
+    background-color: #335666;
+    padding: 2em;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10%;
+    vertical-align: middle;
+}
+
+.smlink:hover {
+    background-color: #224555;
+}
+
+main {
+    margin-top: 5%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+/* Style rules for the footer area */
+
+.sticky-footer {
+    text-align: center;
+    font-size: 1.25em;
+    background-color: #335666;
+    padding: 1% 0%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.25em;
+    background-color: #335666;
+    padding: 1% 0%;
+}
+
+@media only screen and (max-width: 900px) {
+    .logo {
+        width: 20%;
+        height: 20%;
+        display: block;
+        margin: auto;
+        float: none;
+    }
+
+    .textbox {
+        width: 80%;
+    }
+
+    nav, nav ul {
+        float: none;
+        display: block;
+        transform: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 30%;
+        height: 30%;
+    }
+
+    .textbox {
+        width: 90%;
+    }
+
+    nav ul h1 {
+        display: none;
+    }
+
+    nav li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        text-align: center;
+        display: block;
+        padding: 0;
+        margin: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+}
