@@ -18,7 +18,6 @@
 
         </main>
 
-        <!--Footer section-->
-        <footer class="sticky-footer">&copy; 2021 Pclip Development</footer>
-    </body>
-</html>
+<?php
+    include_once 'footer.php';
+?>
