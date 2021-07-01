@@ -3,7 +3,7 @@
 $serverName = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "pclip.web-account-system";
+$dbName = "test-account-system";
 
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
 
