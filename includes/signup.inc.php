@@ -10,7 +10,7 @@ if (isset($_POST["submit"])) {
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
-    if (emptyInputSignup($username, $email, $password, $passwordConf) !== false) {
+/*    if (emptyInputSignup($username, $email, $password, $passwordConf) !== false) {
         header("location: ../signup.php?error=emptyInput");
         exit();
     }
@@ -30,6 +30,7 @@ if (isset($_POST["submit"])) {
         header("location: ../signup.php?error=usernameNotAvailable");
         exit();
     }
+*/
 
     createUser($conn, $username, $email, $password);
 
