@@ -13,6 +13,5 @@
         </main>
 
 <?php
-    echo phpinfo();
     include_once 'footer.php';
 ?>
