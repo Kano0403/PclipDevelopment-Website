@@ -12,17 +12,17 @@ function emptyInputSignup($username, $email, $password, $passwordConf): bool
 function invalidUsername($username): bool
 {
     if (preg_match("/^[a-zA-Z0-9]*?/", $username)) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 function invalidEmail($email): bool
 {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 function confirmPassword($password, $passwordConf): bool
@@ -33,7 +33,7 @@ function confirmPassword($password, $passwordConf): bool
         return false;
     }
 }
-function usernameExists($conn, $username, $email): bool
+function usernameExists($conn, $username, $email): array|bool|null
 {
     $sql = "SELECT * FROM users WHERE usersUsername = ? OR usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);

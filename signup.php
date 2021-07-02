@@ -14,9 +14,8 @@
                 <button type="submit" name="submit">Continue</button>
             </form>
         </div>
-    </section>
 
-    <?php
+        <?php
         if (isset($_GET["error"])) {
             $error = $_GET["error"];
             if ($error == "emptyInput") {
@@ -29,11 +28,15 @@
                 echo "<p>Please make sure you entered the same password in both boxes.</p>";
             } elseif ($error == "usernameNotAvailable") {
                 echo "<p>Sorry, this username is taken.</p>";
+            } elseif ($error == "internalStmtFailure") {
+                echo "<p>Internal error. Try again.</p>";
             } else {
                 echo "<p>Please contact a web developer with this error: " . $error . "</p>";
             }
         }
-    ?>
+        ?>
+
+    </section>
 
 <?php
     include_once 'footer.php';
