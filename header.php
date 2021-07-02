@@ -32,8 +32,6 @@
                         echo "<h1>|</h1>";
                         echo "<li><a href='includes/logout.inc.php'>Logout</a></li>";
                     } else {
-                        echo "<li><a href='signup.php'>Signup</a></li>";
-                        echo "<h1>|</h1>";
                         echo "<li><a href='login.php'>Login</a></li>";
                     }
                 ?>

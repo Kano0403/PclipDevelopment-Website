@@ -3,7 +3,7 @@
 ?>
 
     <!--Main content-->
-    <section>
+    <main>
         <h2>Signup</h2>
         <div class="sighup-page-form">
             <form action="includes/signup.inc.php" method="post">
@@ -36,7 +36,7 @@
             }
         ?>
 
-    </section>
+        </main>
 
 <?php
     include_once 'footer.php';

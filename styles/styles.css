@@ -34,11 +34,11 @@ nav ul li {
 }
 
 nav ul li a{
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: 0.8em;
+    margin-left: 0.8em;
     border-radius: 5px;
     padding: 1em 1.5em;
-    font-size: 1.4em;
+    font-size: 1.2em;
     user-select: none;
     text-decoration: none;
     color: white;
@@ -50,7 +50,7 @@ nav ul li a:hover {
 
 nav ul h1 {
     display: inline;
-    font-size: 2em;
+    font-size: 1.5em;
     user-select: none;
 }
 
@@ -132,6 +132,31 @@ p {
     font-size: 1.1em;
 }
 
+a {
+    color:#335666;
+    
+}
+
+form input {
+    padding: 1em 1em;
+    margin: 0.4em 0em;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #335666;
+    padding: 1em;
+    font-size: 15px;
+    margin: 0.4em 0em;
+    border: none;
+    color: white;
+}
+
+form button:hover {
+    background-color: #224555;
+}
+
 /* Style rules for the footer area */
 
 .sticky-footer {
@@ -180,6 +205,21 @@ footer {
         padding: 0;
         margin: 0;
         text-align: center;
+    }
+
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    form input {
+        display: block;
+    }
+
+    form button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 } 
 
