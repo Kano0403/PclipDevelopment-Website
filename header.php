@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -21,5 +25,17 @@
                 <li><a href="projects.php">Projects</a></li>
                 <h1>|</h1>
                 <li><a href="about.php">About</a></li>
+                <h1>|</h1>
+                <?php
+                    if (isset($_SESSION["userId"])) {
+                        echo "<li><a href='index.php'>{UNSET}</a></li>";
+                        echo "<h1>|</h1>";
+                        echo "<li><a href='includes/logout.inc.php'>Logout</a></li>";
+                    } else {
+                        echo "<li><a href='signup.php'>Signup</a></li>";
+                        echo "<h1>|</h1>";
+                        echo "<li><a href='login.php'>Login</a></li>";
+                    }
+                ?>
             </ul>
         </nav>
