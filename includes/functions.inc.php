@@ -53,7 +53,7 @@ function usernameExists($conn, $username, $email): bool
         return false;
     }
 
-    #mysqli_stmt_close($stmt);
+    # mysqli_stmt_close($stmt);
 }
 #[NoReturn] function createUser($conn, $username, $email, $password) {
     $sql = "INSERT INTO users (usersUsername, usersEmail, usersPassword) VALUES (?, ?, ?);";

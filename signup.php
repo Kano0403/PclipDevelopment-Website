@@ -16,6 +16,25 @@
         </div>
     </section>
 
+    <?php
+        if (isset($_GET["error"])) {
+            $error = $_GET["error"];
+            if ($error == "emptyInput") {
+                echo "<p>Please fill app fields.</p>";
+            } elseif ($error == "invalidUsername") {
+                echo "<p>Please only use characters in the US-English alphabet and numbers 0-9.</p>";
+            } elseif ($error == "invalidEmail") {
+                echo "<p>Please use a valid email. If you are having an issue with your email, please contact Kano0403#7825 on Discord.</p>";
+            } elseif ($error == "failedPasswordConfirmation") {
+                echo "<p>Please make sure you entered the same password in both boxes.</p>";
+            } elseif ($error == "usernameNotAvailable") {
+                echo "<p>Sorry, this username is taken.</p>";
+            } else {
+                echo "<p>Please contact a web developer with this error: " . $error . "</p>";
+            }
+        }
+    ?>
+
 <?php
     include_once 'footer.php';
 ?>

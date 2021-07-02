@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
         exit();
     }
     if (confirmPassword($password, $passwordConf) !== false) {
-        header("location: ../signup.php?error=failedPasswdConfirm");
+        header("location: ../signup.php?error=failedPasswordConfirmation");
         exit();
     }
     if (usernameExists($conn, $username, $email) !== false) {
