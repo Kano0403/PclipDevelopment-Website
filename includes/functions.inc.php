@@ -1,46 +1,37 @@
 <?php
-
 use JetBrains\PhpStorm\NoReturn;
 
 function emptyInputSignup($username, $email, $password, $passwordConf): bool
 {
-    $result = null;
     if (empty($username) || empty($email) || empty($password) || empty($passwordConf)) {
-        $result = true;
+        return true;
     } else {
-        $result = false;
+        return false;
     }
-    return $result;
 }
 function invalidUsername($username): bool
 {
-    $result = null;
     if (preg_match("/^[a-zA-Z0-9]*?/", $username)) {
-        $result = true;
+        return true;
     } else {
-        $result = false;
+        return false;
     }
-    return $result;
 }
 function invalidEmail($email): bool
 {
-    $result = null;
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $result = true;
+        return true;
     } else {
-        $result = false;
+        return false;
     }
-    return $result;
 }
 function confirmPassword($password, $passwordConf): bool
 {
-    $result = null;
     if ($password !== $passwordConf) {
-        $result = true;
+        return true;
     } else {
-        $result = false;
+        return false;
     }
-    return $result;
 }
 function usernameExists($conn, $username, $email): bool
 {
@@ -77,7 +68,7 @@ function usernameExists($conn, $username, $email): bool
     mysqli_stmt_bind_param($stmt, "sss", $username, $email, $password);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+    header("location: ../index.php?error=none");
     exit();
 
 }
